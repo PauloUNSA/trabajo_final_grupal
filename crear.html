@@ -3,10 +3,12 @@
   <head>
     <title>Crear un nuevo administrador</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/estilo2.css">
   </head>
 
   <body>
-    <h1>Crear un nuevo administrador</h1>
+    <div class="login-box">
+    <h1>Nuevo Administrador</h1>
     <form action="cgi-bin/crear.pl">
       <label for='user'>Ingrese el nombre de usuario</label>
       <input type='text' name='user'><br>
@@ -17,7 +19,10 @@
       <label for='app'>Ingrese su apellido</label>
       <input type='text' name='app'><br>
       <input type='submit'>
-    </form>
+      <input type="button" onclick="location.href='login.html'" value="Login"/>
+      <input type="button" onclick="location.href='index.html'" value="Inicio"/>
+      </form>
+  </div>
   </body>
 </html>
 
