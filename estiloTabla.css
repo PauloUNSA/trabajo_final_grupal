@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(background-portada.jpg);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contenedor-resultado{
+    background-color: rgba(161, 149, 161, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 19px;
+    gap: 30px;
+    padding-top: 30px;
+    font-size: 29px;
+}
+.columna{
+    display: flex;
+    flex-direction: row;
+    gap:250px;
+    align-items:center;
+    justify-content: center;
+    width:1000px;
+}
+.cabecera{
+    border-bottom:2px solid black;
+    gap:450px
+}
+.tabla-resultados{
+    flex-direction:column;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items:center;
+    gap:20px;
+}
+.izquierdo{
+    border-right:2px solid black;
+    width:200px;
+}
