@@ -1,5 +1,4 @@
-#!"c:/Strawberry/perl/bin/perl.exe"
-
+#!/usr/bin/perl
    use strict;
    use warnings;
    use DBI;
@@ -22,7 +21,7 @@ HTML
 my $q =CGI->new;
   my $user = 'alumno';
   my $password = 'pweb1';
-  my $dsn = "DBI:MariaDB:database=pweb1;host=192.168.1.9";
+  my $dsn = "DBI:MariaDB:database=pweb1;host=192.168.0.12";
   
   my $dbh = DBI ->connect($dsn,$user,$password) or die ("No se pudo conectar");
 
@@ -42,15 +41,22 @@ my $Id=$q->param("id");
       <div>Precio</div>
     </div>
 HTML
-
+my $nombre;
+my $precio;
  while(my @row=$sth->fetchrow_array){
     print"<div class='columna'><div class='izquierdo'> $row[0] </div> \n <div> $row[1] </div></div>";
+    $nombre=$row[0];
+    $precio=$row[1];
   }
- 
   $sth ->finish;
-  $dbh->disconnect;                         
+ my $user = 'alumno';
+  my $password = 'pweb1';
+  my $dsn = "DBI:MariaDB:database=pweb1;host=192.168.0.12";
 
-
+  my $dbh = DBI ->connect($dsn,$user,$password) or die ("No se pudo conectar");
+  my $sth = $dbh->prepare("INSERT INTO productosVendidos(Id, Nombre, Precio) VALUES (?,?,?)");
+  $sth->execute("$Id","$nombre","$precio");
+$dbh->disconnect;
 
   sub formulario{
 
