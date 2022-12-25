@@ -1,4 +1,4 @@
-#!/user/bin/perl
+#!/usr/bin/perl
    use strict;
    use warnings;
    use DBI;
@@ -51,7 +51,7 @@ my $precio;
   $sth ->finish;
  my $user = 'alumno';
   my $password = 'pweb1';
-  my $dsn = "DBI:MariaDB:database=pweb1;host=192.168.1.9";
+  my $dsn = "DBI:MariaDB:database=pweb1;host=127.0.0.1";
 
   my $dbh = DBI ->connect($dsn,$user,$password) or die ("No se pudo conectar");
   my $sth = $dbh->prepare("INSERT INTO productosVendidos(Id, Nombre, Precio) VALUES (?,?,?)");
@@ -60,8 +60,6 @@ my $precio;
 $dbh->disconnect;
 
 sub formulario{
-
-
     print <<HTML;
         <div>
             <form action="carrito.pl" method="GET">
