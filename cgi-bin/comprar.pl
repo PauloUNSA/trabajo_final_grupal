@@ -39,9 +39,9 @@ my $password = 'pweb1';
 my $dsn = "DBI:MariaDB:database=pweb1;host=127.0.0.1";
 
 my $dbh = DBI ->connect($dsn,$user,$password) or die ("No se pudo conectar");
-my $sth = $dbh->prepare("select Nombre,Precio from productosVendidos where Id=?");
+my $sth = $dbh->prepare("select Nombre,Precio from productosVendidos ");
 #Este Id va a ser el que identrifique al usuario 
-$sth->execute($Id);
+$sth->execute();
 print <<HTML;
 <table id="customers">
   <tr>
