@@ -33,12 +33,12 @@ $dbh->disconnect;
 if (!($body eq "")){
 print "<h2> Bienvenido $body</h2>";
 
-print "<a href= 'http://192.168.0.24/~alumno/trabajo_final_grupal/index.html'>
+print "<a href= '../index.html'>
 <input type='button' value='Ver Pagina'></a>";
 }
 else{
 print "<h2> Los credenciales no coinciden con alguna cuenta existente</h2>";
-print "<a href= 'http://192.168.0.24/~alumno/trabajo_final_grupal/login.html'>
+print "<a href= 'login.html'>
 <input type='button' value='Volver a intentarlo'></a>";
 }
 print "<body<</html>";

@@ -32,7 +32,7 @@ $dbh->disconnect;
 print "<h1> Usuario creado satisfactoriamente</h1>";
 print "<h2>Gracias por crearse una cuenta en nuestra web: <em><strong>$nombre $apellido</strong></em></h2>";
 print "<p>Ahora inicie sesion en su nueva cuenta</p>";
-print "<a href= 'http://192.168.0.24/~alumno/trabajo_final_grupal/login.html'>
+print "<a href= '../login.html'>
 <input type='button' value='Iniciar sesion'></a>";
 
 print "<body<</html>";
