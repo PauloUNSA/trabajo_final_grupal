@@ -33,7 +33,7 @@ $dbh->disconnect;
 if (!($body eq "")){
 print "<h2> Bienvenido $body</h2>";
 
-print "<a href= 'http://192.168.0.24/~alumno/Trabajo/index.html'>
+print "<a href= 'http://192.168.0.24/~alumno/trabajo_final_grupal/index.html'>
 <input type='button' value='Ver Pagina'></a>";
 }
 else{
