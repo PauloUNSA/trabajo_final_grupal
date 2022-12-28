@@ -38,7 +38,7 @@ print "<a href= 'http://192.168.0.24/~alumno/Trabajo/index.html'>
 }
 else{
 print "<h2> Los credenciales no coinciden con alguna cuenta existente</h2>";
-print "<a href= 'http://192.168.0.24/~alumno/Trabajo/login.html'>
+print "<a href= 'http://192.168.0.24/~alumno/trabajo_final_grupal/login.html'>
 <input type='button' value='Volver a intentarlo'></a>";
 }
 print "<body<</html>";
