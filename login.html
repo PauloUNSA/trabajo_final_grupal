@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Login</title>
+    <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="css/estilo2.css"> 
   </head>
-
   <body>
     <div class="login-box">
       <h1>Login</h1>
-      <form action="cgi-bin/login.pl">
+      <form action="cgi-bin/login.pl" method="POST">
         <label for='user'>Ingrese su usuario</label>
         <input type='text' name='user'><br>
-        <label for='contra'>Ingrese su contraseña</label>
+        <br><label for='contra'>Ingrese su contraseña</label>
         <input type='password' name='contra'><br>
-        <input type='submit'>
-        <input type="button" onclick="location.href='crear.html'" value="Crear cuenta"/>
-        <input type="button" onclick="location.href='index.html'" value="Inicio"/>
-     </form>
-   </div>
+        <br><input type='submit' value="Ingresar">
+        <input type="button" onclick="location.href='register.html'" value="Crear cuenta"/>
+        <input type="button" onclick="location.href='index.html'" value="Inicio"/>                        
+      </form>
+    </div>
   </body>
 </html>
 
